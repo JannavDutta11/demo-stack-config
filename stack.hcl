@@ -3,14 +3,14 @@ stack {
   description = "Demo stack linking two workspaces"
 }
  
-deployment "workspace_1" {
+deployment "terraform_azure_demo" {
   workspace = "terraform_azure_demo"
 }
  
-deployment "workspace_2" {
+deployment "azure-demo-2-linking" {
   workspace = "azure-demo-2-linking"
  
   depends_on = [
-    deployment.workspace_1
+    deployment.terraform_azure_demo
   ]
 }
